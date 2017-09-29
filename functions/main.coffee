@@ -1,6 +1,6 @@
 functions = require('firebase-functions')
 admin = require('firebase-admin')
-async = require 'async'
+Crawler = require("crawler");
 auth = require 'basic-auth'
 _ = require 'underscore'
 admin.initializeApp functions.config().firebase
@@ -12,8 +12,6 @@ cors = require('cors')(origin: true)
 
 
 # http://www.ign.com/reviews/games/reviews-ajax?startIndex=25
-
-
 exports.crawl_ign = functions.https.onRequest (request, response) ->
   cors request, response, =>
     admin.database().ref("/config/ign/last_review").once 'value', (snap) ->

@@ -2,8 +2,12 @@
   "name": "functions",
   "description": "Cloud Functions for Firebase",
   "dependencies": {
+    "basic-auth": "^2.0.0",
+    "cors": "^2.8.4",
+    "crawler": "^1.0.5",
     "firebase-admin": "~5.2.1",
-    "firebase-functions": "^0.6.2"
+    "firebase-functions": "^0.6.2",
+    "underscore": "^1.8.3"
   },
   "private": true
 }
